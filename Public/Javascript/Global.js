@@ -15,7 +15,7 @@ $(document).ready(function() {
 // Fill Table with data
 function populateTable(){
 
-    var tableContent = '';
+    var WineBoxes = '';
 
     // jquery Ajax call for json
     // Not sure if '/wine/wine' is right change if needed
@@ -26,14 +26,12 @@ function populateTable(){
 
         // For each Loop here
         $.each(data, function(){
-            tableContent += '<tr>';
-            tableContent += '<td><a href = "#" class = "linkshowwine" rel ="' + this.name +'">'+ this.name +'</a></td>';
-            tableContent += '<td>'+ this.price +'</td>';
-            tableContent += '</tr>'
-
+            WineBoxes += '<div class="container flex-column justify-content-between d-inline-flex w-25 m-3 p-0 shadow bg-white rounded" style="height:300px!important;">'
+            WineBoxes += '<div class="container p-2 pb-4">' + this.name + '</div>'
+            WineBoxes += '<div class="container p-2 pt-4 text-right">' + this.price + ' Kr</div>'
+            WineBoxes += '</div>'
         });
         // Insert into existing html table
-        $('#wineList').find('tbody')
-        .append(tableContent);
+        $('#wine-container').append(WineBoxes);
     });
 };
