@@ -1,0 +1,4 @@
+.wine-display-container:hover >.wine-display-more-info{
+    transition: ease-in-out 200ms;
+    margin-bottom:0!important; 
+}
