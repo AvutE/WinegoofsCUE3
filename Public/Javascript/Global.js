@@ -26,9 +26,13 @@ function populateTable(){
 
         // For each Loop here
         $.each(data, function(){
-            WineBoxes += '<div class="container flex-column justify-content-between d-inline-flex w-25 m-3 p-0 shadow bg-white rounded" style="height:300px!important;">'
-            WineBoxes += '<div class="container p-2 pb-4">' + this.name + '</div>'
-            WineBoxes += '<div class="container p-2 pt-4 text-right">' + this.price + ' Kr</div>'
+            WineBoxes += '<div class="wine-display-container container position-relative d-inline-flex m-3 p-0 shadow bg-light rounded"';
+            WineBoxes += 'style="height:400px!important; overflow:hidden; flex:1 1 400px; background:url(\'/Images/'+ this.artNum +'.jpg\') center no-repeat; background-size:auto 80%;">'
+            WineBoxes +=    '<div class=" container d-flex flex-column justify-content-between">'
+            WineBoxes +=        '<div class="container p-2 pb-4">' + this.name + '</div>'
+            WineBoxes +=        '<div class="container p-2 pt-4 text-right">' + this.price + ' Kr</div>'
+            WineBoxes +=    '</div>'
+            WineBoxes +=    '<div class="wine-display-more-info container d-block position-absolute align-self-end p-2" style="margin-bottom:-50px">' + this.artNum + '</div>'
             WineBoxes += '</div>'
         });
         // Insert into existing html table
