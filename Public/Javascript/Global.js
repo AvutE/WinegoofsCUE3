@@ -19,7 +19,7 @@ function populateTable(){
 
     // jquery Ajax call for json
     // Not sure if '/wine/wine' is right change if needed
-    $.getJSON( '../Routes/Wine/Wines', function(data){
+    $.getJSON( '/Wine/Wines', function(data){
 
         // stick our wine data array into a winelist variable in the global object
         wineListData = data
