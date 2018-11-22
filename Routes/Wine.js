@@ -5,6 +5,7 @@ var router = express.Router();
 var WineController = require('../Controllers/Wine');
 
 router.get('/', WineController.Wine);
+router.get('/Wines', WineController.Wines);
 router.get('/:id', WineController.GetWineById);
 
 router.post('/', WineController.CreateNewWine);
