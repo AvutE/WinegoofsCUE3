@@ -8,7 +8,7 @@ var WineSchema = new Schema({
     artNum: {type: Number, required: true},
     origin: {type: String, required: true, max: 50},
     region: {type: String, required: true, max: 50},
-    grape: {type: String, required: true, max: 50}
+    grape: {type: Array, required: true, max: 50}
 });
 
 module.exports = mongoose.model('Wine', WineSchema);
