@@ -14,6 +14,7 @@ Original project details are available [here](https://github.com/herkommer/TE4-w
 
 ## Tech stack
 Node.js | Express | MongoDB | MVC 
+
 HTML5 | CSS | Javascript
 
 ## Get the project on your machine
