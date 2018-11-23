@@ -9,10 +9,12 @@ On the site itself you will be able to:
 
 
 We want the site to have a "Slack" feeling, simple and cozy. (as few pages as possible)
+
 Original project details are available [here](https://github.com/herkommer/TE4-w47-Project).
 
 ## Tech stack
 TODO improve this section
+
 Node | express | mongodb | mvc |
 
 ## Get the project on your machine
