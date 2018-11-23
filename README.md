@@ -48,7 +48,7 @@ start the server
 
 The server runs on port 4242.
 
-To open the site go to: 'localhost:4242'.
+To open the site, go to: 'localhost:4242'.
 
 ## If you feel like something needs to be added of fixed.
 - Create an issue.
