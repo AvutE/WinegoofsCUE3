@@ -7,7 +7,12 @@ $(document).ready(function() {
     // Populate winetable  on initial page load
     populateTable();
 
-    // Winename link click (not done yet, will whow wineinfo)
+    // Display more info about wine on click
+    $("#wine-container").on('click', '.wine-display-container',function(){
+        console.log(this)
+        $(this).find('.wine-display-more-info-click').toggleClass('wine-info-slide-from-side');
+    });
+
 });
 
 // FUNCTIONS ================================================
@@ -33,7 +38,7 @@ function populateTable(){
             WineBoxes +=        '<div class="container p-2 pt-4 text-right">' + this.price + ' Kr</div>';
             WineBoxes +=    '</div>';
             WineBoxes +=    '<div class="wine-display-more-info container d-block position-absolute align-self-end p-2" style="margin-bottom:-50px">' + this.artNum + '</div>';
-            WineBoxes +=    '<div class="wine-display-more-info-click container d-block position-absolute p-2 h-100"style=" width:30%;right:0;">';
+            WineBoxes +=    '<div class="wine-display-more-info-click container d-block position-absolute p-2 h-100"style=" width:30%;right:0;margin-right:-30%;">';
             WineBoxes +=        '<b>Land:</b><br>' + this.origin;
             WineBoxes +=        '<br><b>Region:</b><br>' + this.region;
             WineBoxes +=        '<br><b>Druvor:</b><br>' + this.grape.join(", ");
@@ -44,3 +49,4 @@ function populateTable(){
         $('#wine-container').append(WineBoxes);
     });
 };
+

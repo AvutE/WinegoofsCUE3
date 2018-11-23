@@ -1,4 +1,18 @@
+#wine-container{
+    pointer-events: none;
+}
+.wine-display-container{
+    cursor: pointer;
+    pointer-events: auto;
+}
+
 .wine-display-container:hover >.wine-display-more-info{
     transition: ease-in-out 200ms;
     margin-bottom:0!important; 
+}
+.wine-display-more-info-click{
+    transition: ease 200ms;
+}
+.wine-info-slide-from-side{
+    margin-right: 0!important;
 }
