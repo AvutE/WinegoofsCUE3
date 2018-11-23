@@ -37,7 +37,7 @@ function populateTable(){
 
         // For each Loop here
         $.each(data, function(){
-            WineBoxes += '<div class="wine-display-container container position-relative d-inline-flex m-3 p-0 shadow bg-light rounded"';
+            WineBoxes += '<div class="wine-display-container container position-relative d-inline-flex m-3 p-0 shadow bg-white rounded"';
             WineBoxes += 'style="height:400px!important; overflow:hidden; flex:1 1 400px; background:url(\'/Images/'+ this.artNum +'.jpg\') center no-repeat; background-size:auto 80%;">';
             WineBoxes +=    '<div class=" container d-flex flex-column justify-content-between">';
             WineBoxes +=        '<div class="container p-2 pb-4">' + this.name + '</div>';
