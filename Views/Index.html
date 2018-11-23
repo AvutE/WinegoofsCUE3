@@ -62,7 +62,7 @@
     </div>
 
         <!-- Popup shoppingcart -->
-    <button class="open-button" onclick="openForm()"><i class="fa fa-shopping-cart"></i></button>
+    <button id="open-cart-button" class="open-button"><i class="fa fa-shopping-cart"></i></button>
 
     <div class="form-cart" id="cart">
         <form class="form-container">
@@ -75,7 +75,7 @@
             </h4>
             <p>Totalt <span class="price" style="color:black"><b><cost></cost></b></span></p>
             <button type="submit" class="btn">Betala</button>
-            <button type="submit" class="btn cancel" onclick="closeForm()">Stäng</button>
+            <button type="button" id="close-cart-button" class="btn cancel"">Stäng</button>
         </form>
     </div>
         <!-- /Popup shoppingcart -->

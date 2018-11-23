@@ -19,6 +19,16 @@ $(document).ready(function() {
         $(this).find('.wine-display-more-info-click').toggleClass('wine-info-slide-from-side');
     });
 
+    // Cart
+    // Open
+    $("#open-cart-button").click(function(){
+        $("#cart").show();
+    });
+    // Close
+    $("#close-cart-button").click(function(){
+        $("#cart").hide();
+    });
+
 });
 
 // FUNCTIONS ================================================
@@ -55,11 +65,3 @@ function populateTable(){
         $('#wine-container').append(WineBoxes);
     });
 };
-
-function openForm() {
-    document.getElementById("cart").style.display = "block";
-}
-
-function closeForm() {
-    document.getElementById("cart").style.display = "none";
-}
