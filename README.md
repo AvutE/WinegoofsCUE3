@@ -13,9 +13,8 @@ We want the site to have a "Slack" feeling, simple and cozy. (as few pages as po
 Original project details are available [here](https://github.com/herkommer/TE4-w47-Project).
 
 ## Tech stack
-TODO improve this section
-
-Node | express | mongodb | mvc |
+Node.js | Express | MongoDB | MVC 
+HTML5 | CSS | Javascript
 
 ## Get the project on your machine
 
