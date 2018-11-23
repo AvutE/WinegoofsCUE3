@@ -36,9 +36,9 @@ function populateTable(){
             WineBoxes +=        '<div class="container p-2 pb-4">' + this.name + '</div>';
             WineBoxes +=        '<div class="container p-2 pt-4 text-right">' + this.price + ' Kr</div>';
             WineBoxes +=    '</div>';
-            WineBoxes +=    '<div class="wine-display-more-info container d-block position-absolute align-self-end p-2" style="margin-bottom:-50px">' + this.artNum + '</div>';
-            WineBoxes +=    '<div class="wine-display-more-info-click container d-block position-absolute p-2 h-100"style="min-width:150px;width:30%;right:0;margin-right:-200px;">';
-            WineBoxes +=        '<br><b>Land:</b><br>' + this.origin;
+            WineBoxes +=    '<div class="wine-display-more-info container d-block position-absolute align-self-end p-2" style="margin-bottom:-50px">Art.Nr: ' + this.artNum + '</div>';
+            WineBoxes +=    '<div class="wine-display-more-info-click container d-block position-absolute p-2 bg-primary text-light rounded"style="min-width:150px;width:30%;right:0;margin-top:50px;margin-right:-200px;">';
+            WineBoxes +=        '<b>Land:</b><br>' + this.origin;
             WineBoxes +=        '<br><b>Region:</b><br>' + this.region;
             WineBoxes +=        '<br><b>Druvor:</b><br>' + this.grape.join(", ");
             WineBoxes +=    '</div>';
