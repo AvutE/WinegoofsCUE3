@@ -8,6 +8,7 @@ $(document).ready(function() {
     populateTable();
 
     // Winename link click (not done yet, will whow wineinfo)
+    $('#wineList').find('tbody').on('click','td a.linkshowwine', showWineInfo);
 });
 
 // FUNCTIONS ================================================
@@ -22,7 +23,7 @@ function populateTable(){
     $.getJSON( '/Wine/Wines', function(data){
 
         // stick our wine data array into a winelist variable in the global object
-        wineListData = data
+        wineListData = data;
 
         // For each Loop here
         $.each(data, function(){
@@ -36,4 +37,29 @@ function populateTable(){
         $('#wineList').find('tbody')
         .append(tableContent);
     });
+};
+
+// Wine info
+function showWineInfo(event){
+
+    // Prevent link from firing
+    event.preventDefault();
+
+    // Retrive WineName from link rel attribute
+    var thisWineName = $(this).attr('rel');
+
+    // Get index of object based on id
+    var arrayPosition = wineListData.map(function(arrayItem){
+        return arrayItem.name;
+    }).indexOf(thisWineName);
+
+    // Get wine object
+    var thisWineObject = wineListData[arrayPosition];
+
+    // Populate the info box
+    $('#wineInfoArtnum').text(thisWineObject.artNum);
+    $('#wineInfoOrigin').text(thisWineObject.origin);
+    $('#wineInfoRegion').text(thisWineObject.region);
+    $('#wineInfoGrape').text(thisWineObject.grape);
+
 };
