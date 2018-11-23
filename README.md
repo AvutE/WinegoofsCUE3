@@ -13,9 +13,15 @@ We want the site to have a "Slack" feeling, simple and cozy. (as few pages as po
 Original project details are available [here](https://github.com/herkommer/TE4-w47-Project).
 
 ## Tech stack
-Node.js | Express | MongoDB | MVC 
+#### Node.js | Express 
+Sets up Server-side environment and server-structure.
+#### MongoDB
+Used for CRUD of product information between Database and the site it self.
+#### MVC
+File and working structure.
 
-HTML5 | CSS | Javascript
+#### HTML5 | CSS | Javascript
+Client side magic.
 
 ## Get the project on your machine
 
