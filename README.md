@@ -27,7 +27,7 @@ To start the server type.
 `node App.js`
 
 
-To open the site localy on your machine type : localhost/4242
+To open the site localy on your machine type this in your browser : localhost/4242
 
 ## If you feel like something needs to be added of fixed.
 - Create an issue.
