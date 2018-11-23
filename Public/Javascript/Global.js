@@ -7,6 +7,13 @@ $(document).ready(function() {
     // Populate winetable  on initial page load
     populateTable();
 
+    // Side Navbar click functions
+    $('.leftmenutrigger').on('click', function (e) {
+    $('.side-nav').toggleClass("open");
+    $('#wrapper').toggleClass("open");
+    e.preventDefault();
+    });
+
     // Display more info about wine on click
     $("#wine-container").on('click', '.wine-display-container',function(){
         $(this).find('.wine-display-more-info-click').toggleClass('wine-info-slide-from-side');
