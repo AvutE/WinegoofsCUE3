@@ -8,6 +8,13 @@ $(document).ready(function() {
     populateTable();
 
     // Winename link click (not done yet, will whow wineinfo)
+
+    // Side Navbar click functions
+    $('.leftmenutrigger').on('click', function (e) {
+    $('.side-nav').toggleClass("open");
+    $('#wrapper').toggleClass("open");
+    e.preventDefault();
+    });
 });
 
 // FUNCTIONS ================================================
