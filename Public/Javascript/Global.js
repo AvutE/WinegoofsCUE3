@@ -27,7 +27,7 @@ function populateTable(){
     $.getJSON( '/Wine/Wines', function(data){
 
         // stick our wine data array into a winelist variable in the global object
-        wineListData = data
+        wineListData = data;
 
         // For each Loop here
         $.each(data, function(){
