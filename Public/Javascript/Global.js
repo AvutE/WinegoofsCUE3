@@ -29,6 +29,20 @@ $(document).ready(function() {
         $("#cart").hide();
     });
 
+    // Add to cart
+    $('#wine-container').on('click', '.cart-add-button', function(){
+        var cartInfo = "";
+        $.getJSON('/Wine/' + this.value, function(data){
+            cartInfo +='<tr>';
+            cartInfo +=   '<td>' + data.name + '</td>';
+            cartInfo +=   '<td>' + data.price + ' kr</td>';
+            cartInfo +='</tr>';
+            $('#cart-item-table').append(cartInfo);
+        });
+        
+ 
+    });
+
 });
 
 // FUNCTIONS ================================================
@@ -53,7 +67,10 @@ function populateTable(){
             WineBoxes +=        '<div class="container p-2 pb-4">' + this.name + '</div>';
             WineBoxes +=        '<div class="container p-2 pt-4 text-right">' + this.price + ' Kr</div>';
             WineBoxes +=    '</div>';
-            WineBoxes +=    '<div class="wine-display-more-info container d-block position-absolute align-self-end p-2" style="margin-bottom:-50px">Art.Nr: ' + this.artNum + '</div>';
+            WineBoxes +=    '<div class="wine-display-more-info container d-block position-absolute align-self-end p-2" style="margin-bottom:-100px">'
+            WineBoxes +=        '<button type="button" class="cart-add-button" value="'+ this._id + '">Add to cart</button><br>'
+            WineBoxes +=        'Art.Nr: ' + this.artNum;
+            WineBoxes +=    '</div>'
             WineBoxes +=    '<div class="wine-display-more-info-click container d-block position-absolute p-2 bg-primary text-light rounded"style="min-width:150px;width:30%;right:0;margin-top:50px;margin-right:-200px;">';
             WineBoxes +=        '<b>Land:</b><br>' + this.origin;
             WineBoxes +=        '<br><b>Region:</b><br>' + this.region;
