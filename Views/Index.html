@@ -62,6 +62,33 @@
         </nav>
         <!-- /Navbar -->
 
+    </div>
+
+        <!-- Popup shoppingcart -->
+    <button id="open-cart-button" class="open-button"><i class="fa fa-shopping-cart"></i></button>
+
+    <div class="form-cart" id="cart">
+        <form class="form-container">
+            <h4>Kundvagn
+                <span class="price" style="color:black">
+                    <i class="fa fa-shopping-cart"></i>
+                    <b><cartItemCount></cartItemCount></b>
+                </span>
+                <p><itemsInCart></itemsInCart></p>
+            </h4>
+            <table id="cart-item-table">
+                <tr>
+                    <th scope="col">Vin</th>
+                    <th scope="col">Pris</th>
+                </tr>
+            </table>
+            <p>Totalt <span class="price" style="color:black"><b><cost></cost></b></span></p>
+            <button type="submit" class="btn">Betala</button>
+            <button type="button" id="close-cart-button" class="btn cancel">Stäng</button>
+        </form>
+    </div>
+        <!-- /Popup shoppingcart -->
+
         <!-- Body Content -->
         <div class="container-fluid">
             <div class="container d-flex flex-wrap justify-content-around" id="wine-container">
